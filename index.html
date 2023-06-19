@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/dog-component.js"></script>
+    <script>
+      function addADog() {
+        const dogName = document.getElementById('dogName').value;
+        const dogComponent = document.createElement('dog-component');
+        dogComponent.textContent = dogName;
+        document.getElementById('dogs').appendChild(dogComponent);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="dogs">
+      <dog-component>Solo Dog</dog-component>
+    </div>
+    <input type="text" id="dogName" />
+    <button id="dogButton" onClick=addADog() >Change Dog Name</button>
+  </body>
+</html>
